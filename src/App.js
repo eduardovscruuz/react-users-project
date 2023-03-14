@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Users from "./assets/user-cons.png";
 import Arrow from "./assets/arrow.png";
 import Trash from "./assets/trash.png";
@@ -14,13 +14,22 @@ import {
 } from "./styles";
 
 const App = () => {
-	const users = [
-		{ id: Math.random(), name: "Eduardo", age: "22" },
-		{ id: Math.random(), name: "Gabriely", age: "24" },
-	];
-	function addNewUser() {
-		users.push({ id: Math.random(), name: "Eduardo", age: "22" });
+	const [users, setUsers] = useState([]);
+	const [name, setName] = useState();
+	const [age, setAge] = useState();
+
+	function changeInputName(event) {
+		setName(event.target.value);
 	}
+
+	function changeInputAge(event) {
+		setAge(event.target.value);
+	}
+
+	function addNewUser() {
+		setUsers([...users, { id: Math.random(), name, age }]);
+	}
+
 	return (
 		<Container>
 			<Image alt="people talking" src={Users} />
@@ -29,10 +38,10 @@ const App = () => {
 				<H1>Olá!</H1>
 
 				<InputLabel>Nome</InputLabel>
-				<Input placeholder="Nome"></Input>
+				<Input onChange={changeInputName} placeholder="Nome"></Input>
 
 				<InputLabel>Idade</InputLabel>
-				<Input placeholder="Idade"></Input>
+				<Input onChange={changeInputAge} placeholder="Idade"></Input>
 
 				<Button onClick={addNewUser}>
 					Cadastrar <img alt="arrow" src={Arrow} />

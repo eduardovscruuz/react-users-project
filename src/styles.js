@@ -64,7 +64,6 @@ export const Button = styled.button`
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
-	margin-top: 80px;
 	width: 342px;
 	height: 74px;
 	font-weight: 700;
@@ -73,9 +72,10 @@ export const Button = styled.button`
 	color: white;
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 14px;
+	border: none;
 
 	&:hover {
-		opacity: 0.8;
+		background: rgba(0, 0, 0, 0.6);
 	}
 `;
 
