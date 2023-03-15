@@ -1,35 +1,18 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Axios from "axios";
-import Users from "../../assets/user-cons.png";
+import Avatar from "../../assets/avatar.png";
 import Arrow from "../../assets/arrow.png";
 import Trash from "../../assets/trash.png";
-import {
-	Container,
-	Image,
-	ContainerForm,
-	H1,
-	InputLabel,
-	Input,
-	Button,
-	User,
-} from "./styles";
+import H1 from "../../components/Title";
+import Button from "../../components/Button";
+import ContainerForm from "../../components/ContainerForm";
+import { Container, Image, User } from "./styles";
 
-const App = () => {
+const Users = () => {
 	const [users, setUsers] = useState([]);
-	const inputName = useRef();
-	const inputAge = useRef();
+	const navigate = useNavigate();
 
-	async function addNewUser() {
-		const { data: newUser } = await Axios.post(
-			"http://localhost:3001/users",
-			{
-				name: inputName.current.value,
-				age: inputAge.current.value,
-			}
-		);
-
-		setUsers([...users, newUser]);
-	}
 	useEffect(() => {
 		async function fetchUsers() {
 			const { data: newUsers } = await Axios.get(
@@ -46,21 +29,19 @@ const App = () => {
 		setUsers(newUsers);
 	}
 
+	function goBackPage() {
+		navigate("/");
+	}
+
 	return (
 		<Container>
-			<Image alt="people talking" src={Users} />
+			<Image alt="people talking" src={Avatar} />
 
-			<ContainerForm>
-				<H1>Olá!</H1>
+			<ContainerForm isBlur={true}>
+				<H1>Usuários</H1>
 
-				<InputLabel>Nome</InputLabel>
-				<Input ref={inputName} placeholder="Nome"></Input>
-
-				<InputLabel>Idade</InputLabel>
-				<Input ref={inputAge} placeholder="Idade"></Input>
-
-				<Button onClick={addNewUser}>
-					Cadastrar <img alt="arrow" src={Arrow} />
+				<Button isBack={true} onClick={goBackPage}>
+					<img alt="arrow" src={Arrow} /> Voltar
 				</Button>
 
 				<ul>
@@ -79,4 +60,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default Users;
