@@ -16,9 +16,11 @@ export const Button = styled.button`
 		props.isBack ? "transparent" : "rgba(0, 0, 0, 0.8)"};
 	border-radius: 14px;
 	border: ${(props) => (props.isBack ? "1px solid #ffffff" : "none")};
+	transition: 0.3s;
 
 	&:hover {
-		background: rgba(0, 0, 0, 0.6);
+		background: ${(props) =>
+			props.isBack ? "rgba(255, 255, 255, 0.14)" : "rgba(0, 0, 0, 0.6)"};
 	}
 
 	img {

@@ -8,6 +8,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
+	margin-bottom: -2%;
 `;
 export const Image = styled.img`
 	padding: 20px;
@@ -37,4 +38,30 @@ export const Input = styled.input`
 	padding-left: 20px;
 	border-radius: 17px;
 	margin-bottom: 35px;
+`;
+
+export const ButtonUsers = styled.button`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 343px;
+	height: 45px;
+	margin-top: 12px;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 28px;
+	color: white;
+	background: transparent;
+	border-radius: 14px;
+	border: 1px solid white;
+	transition: 0.3s;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.14);
+	}
+
+	img {
+		width: 15px;
+	}
 `;

@@ -8,6 +8,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
+	margin-bottom: -2%;
 `;
 export const Image = styled.img`
 	padding: 20px;
