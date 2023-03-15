@@ -36,6 +36,8 @@ const App = () => {
 			);
 
 			setUsers([...users, newUser]);
+			setVal("");
+			setMessage("");
 		}
 	}
 	function nextPage() {
