@@ -9,5 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border;
     text-decoration: none;
 }
-
-`;
+#root{
+    height:100vh;
+}
+`

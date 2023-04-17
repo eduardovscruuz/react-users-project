@@ -21,7 +21,7 @@ export const Image = styled.img`
 	padding: 20px;
 
 	@media only screen and (max-width: 600px) {
-   height: 100%;
+   width: 80%;
   }
 `;
 
@@ -69,6 +69,7 @@ export const Input = styled.input`
 	padding-left: 8%;
 	border-radius: 17px;
 	margin-bottom: 5%;
+	
   }
 
 `;
@@ -96,6 +97,7 @@ export const ButtonUsers = styled.button`
 
 	img {
 		width: 15px;
+		
 	}
 
 	@media only screen and (max-width: 600px) {

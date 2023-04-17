@@ -24,6 +24,7 @@ export const ContainerForm = styled.div`
   @media only screen and (max-width: 600px) {
     padding: 6%;
 	width:75vw;
-	height:60.7vh;
+	height:100%;
+	
   }
 `;

@@ -32,7 +32,7 @@ export const Button = styled.button`
 	font-size: 1.2em;
     border-radius: 14px;
 	width: 90%;
-	margin-top: 15%;
+	margin-top: 25%;
 	height: 13%;
   }
 `;
