@@ -9,9 +9,20 @@ export const Container = styled.div`
 	align-items: center;
 	height: 100vh;
 	margin-bottom: -2%;
+
+	@media only screen and (max-width: 600px) {
+   height: 100%;
+  }
+  
 `;
+
+
 export const Image = styled.img`
 	padding: 20px;
+
+	@media only screen and (max-width: 600px) {
+   height: 100%;
+  }
 `;
 
 export const InputLabel = styled.p`
@@ -23,6 +34,15 @@ export const InputLabel = styled.p`
 	display: flex;
 	align-self: flex-start;
 	margin-left: 20px;
+
+	@media only screen and (max-width: 600px) {
+	font-weight: 700;
+	font-size: 1em;
+	margin-left: 5%;
+	padding-bottom: 3%;
+
+  }
+
 `;
 export const Input = styled.input`
 	width: 342px;
@@ -38,6 +58,19 @@ export const Input = styled.input`
 	padding-left: 20px;
 	border-radius: 17px;
 	margin-bottom: 35px;
+
+	@media only screen and (max-width: 600px) {
+    padding: 4%;
+    border-radius: 0;
+	width:80%;
+	height: 5%;
+	font-weight: 400;
+	font-size: 1.1em;
+	padding-left: 8%;
+	border-radius: 17px;
+	margin-bottom: 5%;
+  }
+
 `;
 
 export const ButtonUsers = styled.button`
@@ -64,4 +97,15 @@ export const ButtonUsers = styled.button`
 	img {
 		width: 15px;
 	}
+
+	@media only screen and (max-width: 600px) {
+	gap: 2%;
+	height: 7%;
+	margin-top: 4%;
+	font-size: 1.2em;
+	line-height: 2%;
+    padding: 8%;
+	width:90%;
+
+  }
 `;

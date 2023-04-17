@@ -16,8 +16,14 @@ export const ContainerForm = styled.div`
 	height: 100vh;
 
 	${(props) =>
-		props.isBlur &&
-		`
-	backdrop-filter: blur(45px)
-	`};
+    props.isBlur &&
+    `
+    backdrop-filter: blur(45px)
+  `};
+
+  @media only screen and (max-width: 600px) {
+    padding: 6%;
+	width:75vw;
+	height:60.7vh;
+  }
 `;

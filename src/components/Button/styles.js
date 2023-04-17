@@ -26,4 +26,13 @@ export const Button = styled.button`
 	img {
 		transform: ${(props) => props.isBack && "rotateY(180deg)"};
 	}
+
+	@media only screen and (max-width: 600px) {
+    padding: 8%;
+	font-size: 1.2em;
+    border-radius: 14px;
+	width: 90%;
+	margin-top: 15%;
+	height: 13%;
+  }
 `;
